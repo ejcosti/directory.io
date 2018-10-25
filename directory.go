@@ -5,6 +5,7 @@ import (
 	"log"
 	"math/big"
 	"net/http"
+        "os"
 
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/chaincfg"
