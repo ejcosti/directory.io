@@ -146,6 +146,14 @@ func PageRequest(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, PageTemplateFooter, previous, next)
 }
 
+func determineListenAddress() (string, error) {
+  port := os.Getenv("PORT")
+  if port == "" {
+    return "", fmt.Errorf("$PORT not set")
+  }
+  return ":" + port, nil
+}
+
 func RedirectRequest(w http.ResponseWriter, r *http.Request) {
 	key := r.URL.Path[36:]
 
@@ -164,9 +172,16 @@ func RedirectRequest(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	addr, err := determineListenAddress()
+  if err != nil {
+    log.Fatal(err)
+  }
+
 	http.HandleFunc("/", PageRequest)
+	log.Printf("Listening on %s...\n", addr)
 	http.HandleFunc("/warning:understand-how-this-works!/", RedirectRequest)
 
-	log.Println("Listening")
-	log.Fatal(http.ListenAndServe(":8085", nil))
+	if err := http.ListenAndServe(addr, nil); err != nil {
+    panic(err)
+  }
 }
