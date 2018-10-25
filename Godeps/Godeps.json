@@ -2,9 +2,6 @@
 	"ImportPath": "directory.io",
 	"GoVersion": "go1.11",
 	"GodepVersion": "v80",
-	"Packages": [
-		"./..."
-	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/btcsuite/btcd/btcec",
