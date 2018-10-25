@@ -1,9 +1,49 @@
 {
-	"ImportPath": ".",
+	"ImportPath": "directory.io",
 	"GoVersion": "go1.11",
 	"GodepVersion": "v80",
 	"Packages": [
 		"./..."
 	],
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/btcsuite/btcd/btcec",
+			"Comment": "BTCD_0_12_0_BETA-856-g67e573d",
+			"Rev": "67e573d211ace594f1366b4ce9d39726c4b19bd0"
+		},
+		{
+			"ImportPath": "github.com/btcsuite/btcd/chaincfg",
+			"Comment": "BTCD_0_12_0_BETA-856-g67e573d",
+			"Rev": "67e573d211ace594f1366b4ce9d39726c4b19bd0"
+		},
+		{
+			"ImportPath": "github.com/btcsuite/btcd/chaincfg/chainhash",
+			"Comment": "BTCD_0_12_0_BETA-856-g67e573d",
+			"Rev": "67e573d211ace594f1366b4ce9d39726c4b19bd0"
+		},
+		{
+			"ImportPath": "github.com/btcsuite/btcd/wire",
+			"Comment": "BTCD_0_12_0_BETA-856-g67e573d",
+			"Rev": "67e573d211ace594f1366b4ce9d39726c4b19bd0"
+		},
+		{
+			"ImportPath": "github.com/btcsuite/btcutil",
+			"Comment": "BTCUTIL_0_5_0-81-gab6388e",
+			"Rev": "ab6388e0c60ae4834a1f57511e20c17b5f78be4b"
+		},
+		{
+			"ImportPath": "github.com/btcsuite/btcutil/base58",
+			"Comment": "BTCUTIL_0_5_0-81-gab6388e",
+			"Rev": "ab6388e0c60ae4834a1f57511e20c17b5f78be4b"
+		},
+		{
+			"ImportPath": "github.com/btcsuite/btcutil/bech32",
+			"Comment": "BTCUTIL_0_5_0-81-gab6388e",
+			"Rev": "ab6388e0c60ae4834a1f57511e20c17b5f78be4b"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ripemd160",
+			"Rev": "74cb1d3d52f4c01cbfb44c1b50d204462f3124c7"
+		}
+	]
 }
