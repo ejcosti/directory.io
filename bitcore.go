@@ -72,7 +72,7 @@ func compute(count *big.Int) (keys [ResultsPerPage]Key, length int) {
 func main() {
 	start_val := new(big.Int)
 
-	start_val, sok := start_val.SetString("74968309822361279513706563288209140390982877136853926828208222671511747", 10)
+	start_val, sok := start_val.SetString("74968309822361279513706563288209140390982877136853926828208222868511747", 10)
   if !sok {
       	fmt.Println("SetString: error")
         return
