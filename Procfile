@@ -1,1 +1,1 @@
-web: directory.go
+web: directory
