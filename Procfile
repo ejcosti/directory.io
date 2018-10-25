@@ -1,1 +1,1 @@
-go run directory.go
+web: directory.go
