@@ -150,7 +150,8 @@ func PageRequest(w http.ResponseWriter, r *http.Request) {
 func determineListenAddress() (string, error) {
   port := os.Getenv("PORT")
   if port == "" {
-    return "", fmt.Errorf("$PORT not set")
+    port = "8085"
+		fmt.Println("INFO: No PORT environment variable detected, defaulting to " + port)
   }
   return ":" + port, nil
 }
