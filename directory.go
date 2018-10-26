@@ -182,7 +182,7 @@ func main() {
 	http.HandleFunc("/", PageRequest)
 	http.HandleFunc("/warning:understand-how-this-works!/", RedirectRequest)
 	
-	log.Printf("Listening on %s...\n", addr)
+	fmt.Println("Listening on %s...\n", addr)
 	if err := http.ListenAndServe(addr, nil); err != nil {
     panic(err)
   }
