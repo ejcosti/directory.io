@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"math/big"
 	"net/http"
-        "os"
+  "os"
 
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/chaincfg"
